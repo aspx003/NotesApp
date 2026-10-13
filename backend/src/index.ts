@@ -1,5 +1,6 @@
-import express, { Request, Response } from "express";
+import express from "express";
 import dotenv from "dotenv";
+import userRouter from "./users/userRouter";
 
 // Load environment variables
 dotenv.config();
@@ -10,10 +11,7 @@ const port = process.env.PORT || 3000;
 // Middleware to parse JSON
 app.use(express.json());
 
-// Sample Route
-app.get("/", (req: Request, res: Response) => {
-  res.json({ message: "Hello, TypeScript Express Backend!" });
-});
+app.use("/users", userRouter);
 
 // Start Server
 app.listen(port, () => {

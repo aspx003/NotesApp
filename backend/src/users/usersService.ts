@@ -1,6 +1,6 @@
 import { eq, or } from "drizzle-orm";
-import { db } from "../../repository/sqlite/db";
-import { users } from "../../repository/sqlite/schema";
+import { db } from "../repository/sqlite/db";
+import { users } from "../repository/sqlite/schema";
 import bcrypt from "bcryptjs";
 import { NewUserType } from "./usersDTO";
 
